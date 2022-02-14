@@ -1,19 +1,8 @@
-.form {
-  width: 90%;
-  max-width: 40rem;
-  margin: 2rem auto;
-  padding: 2rem;
-}
-
-.actions {
-  text-align: center;
-}
-
 .input {
   margin: 2rem auto;
   padding: 1rem;
   width: 90%;
-  
+  max-width: 40rem;
 }
 
 .input label {
@@ -34,4 +23,8 @@
 .input input:focus {
   outline: none;
   border-color: #4f005f;
+}
+
+.input button {
+  margin-top: 1rem
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import WeatherForm from "./components/WeatherForm";
-import WeatherForecast from "./components/WeatherForecast";
+// import WeatherForecast from "./components/WeatherForecast";
 
 function App() {
   const [isWeatherLoaded, setIsWeatherLoaded] = useState(false);
@@ -13,7 +13,7 @@ function App() {
   return (
     <React.Fragment>
       <WeatherForm onWeatherRequest={weatherRequest} />
-      {isWeatherLoaded && <WeatherForecast />}
+      {/* {isWeatherLoaded && <WeatherForecast />} */}
     </React.Fragment>
   );
 }

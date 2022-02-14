@@ -2,24 +2,22 @@ import React, { useRef } from "react";
 
 import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
-import Input from "../UI/Input/Input";
 import classes from "./WeatherForm.module.css";
 
 const WeatherForm = (props) => {
-  const enteredCityRef = useRef();
+  const enteredLocationRef = useRef();
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    props.onWeatherRequest(enteredCityRef.current.value);
+    props.onWeatherRequest(enteredLocationRef.current.value);
   };
 
   return (
-    <Card className={classes.form}>
+    <Card className={classes.input}>
       <form onSubmit={formSubmitHandler}>
-        <Input ref={enteredCityRef} type="text" label="City" />
-        <div className={classes.actions}>
-          <Button type="submit">Find weather</Button>
-        </div>
+        <label htmlFor="location">Location</label>
+        <input id="location" type="text" ref={enteredLocationRef} />
+        <Button type="submit">Find weather</Button>
       </form>
     </Card>
   );
