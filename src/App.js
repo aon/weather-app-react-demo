@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import WeatherForm from "./components/WeatherForm";
 import WeatherForecast from "./components/WeatherForecast";
@@ -8,6 +8,10 @@ function App() {
   const [isWeatherReady, setIsWeatherReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    document.title = "Weather App Demo"
+  })
 
   const fetchWeatherHandler = async (location) => {
     setIsWeatherLoading(true);
