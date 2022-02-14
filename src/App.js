@@ -18,10 +18,11 @@ function App() {
     console.log("requested city: ", location);
 
     try {
-      const parsedLocation = location.trim().replace(" ", "-");
+      const parsedLocation = location.trim();
       const apiKey = "151a0df683d4d42b733d682a64c8658e";
       const units = "metric"
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${parsedLocation}&appid=${apiKey}&units=${units}`
+      console.log(`parsed: ${parsedLocation}`)
       console.log(`url: ${url}`)
       const response = await fetch(url);
       if (!response.ok) {

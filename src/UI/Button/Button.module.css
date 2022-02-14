@@ -1,5 +1,5 @@
 .button {
-  background-color: #EA4C89;
+  background-color: #21b664;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -26,5 +26,5 @@
 
 .button:hover,
 .button:focus {
-  background-color: #F082AC;
+  background-color: #5cdb95;
 }
