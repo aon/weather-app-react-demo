@@ -24,6 +24,10 @@
   vertical-align: top;
 }
 
+.left-temp {
+  margin: auto 1rem;
+}
+
 .left-temp-main {
   font-weight: bold;
   font-size: x-large;

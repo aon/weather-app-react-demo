@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Card from "./UI/Card/Card";
 import WeatherForm from "./components/WeatherForm";
 import WeatherForecast from "./components/WeatherForecast";
 
@@ -18,24 +19,18 @@ function App() {
     setIsWeatherReady(false);
     setError(null);
 
-    //DEBUG
-    console.log("requested city: ", location);
 
     try {
       const parsedLocation = location.trim();
       const apiKey = "151a0df683d4d42b733d682a64c8658e";
       const units = "metric"
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${parsedLocation}&appid=${apiKey}&units=${units}`
-      console.log(`parsed: ${parsedLocation}`)
-      console.log(`url: ${url}`)
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
 
       const data = await response.json();
-
-      console.log(data);
 
       setWeatherData({
         location: data.name,
@@ -46,7 +41,6 @@ function App() {
         wind: data.wind.speed,
         iconCode: data.weather[0].icon
       })
-      console.log(weatherData);
 
       setIsWeatherReady(true);
     } catch (error) {
@@ -59,8 +53,7 @@ function App() {
   return (
     <React.Fragment>
       <WeatherForm onWeatherRequest={fetchWeatherHandler} />
-      {isWeatherLoading && <p>Loading...</p>}
-      {!isWeatherLoading && !error && isWeatherReady && <WeatherForecast data={weatherData}/>}
+      {!error && <WeatherForecast data={weatherData} isLoading={isWeatherLoading} isReady={isWeatherReady}/>}
       {error && <p>{error.message}</p>}
     </React.Fragment>
   );
