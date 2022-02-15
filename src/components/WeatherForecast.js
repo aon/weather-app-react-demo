@@ -16,7 +16,7 @@ const WeatherForecast = (props) => {
   }
 
   return (
-    <Card className={classes.card}>
+    <Card>
       {props.isLoading && <p>Loading...</p>}
       {!props.isLoading && (
         <div>
