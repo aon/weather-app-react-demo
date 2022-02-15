@@ -41,7 +41,10 @@ function App() {
         location: data.name,
         temp: data.main.temp,
         maxTemp: data.main.temp_max,
-        minTemp: data.main.temp_min
+        minTemp: data.main.temp_min,
+        humidity: data.main.humidity,
+        wind: data.wind.speed,
+        iconCode: data.weather[0].icon
       })
       console.log(weatherData);
 

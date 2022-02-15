@@ -1,6 +1,48 @@
-.forecast {
-  margin: 2rem auto;
+.card {
+  margin: auto;
   padding: 1rem;
   width: 90%;
   max-width: 40rem;
+}
+
+.title {
+  margin: 0.6rem;
+}
+
+.forecast {
+  display: flex;
+}
+
+.left {
+  flex: auto;
+  padding: 0 2rem;
+}
+
+.left img,
+.left-temp {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left-temp-main {
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 0.2em;
+}
+
+.left-temp-secondary {
+  margin: 0;
+}
+
+.right {
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+  justify-content: center;
+}
+
+.right p {
+  /* border: 1px solid; */
+  margin: 5px 0;
 }
