@@ -3,7 +3,7 @@
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -25,6 +25,6 @@
 }
 
 .button:hover,
-.button:focus {
+.button:active {
   background-color: #5cdb95;
 }

@@ -19,5 +19,11 @@
 }
 
 .input button {
-  margin-top: 1rem
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .input button {
+    width: 100%;
+  }
 }
